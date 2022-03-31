@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="/main.c39d6dcf.js"></script>
+
+    <h2>Donate lamports</h2>
+    <form name="donationForm">
+        <p><b>Enter donation amount in lamports:</b><br>
+         <input name="donationAmount" id="donationInput" type="number">
+        </p>
+       </form>
+    <button onclick="sendDonation()">Send donation</button>
+
+    <br>
+
+    <h2>Withdraw donations</h2>
+    <button onclick="main.withdrawDonations()">Withdraw all donations</button>
+
+    <h2>Donations of a user</h2>
+    <form name="searchDonations">
+        <p>Enter user pubKey or leave empty to see all donations</p>
+        <input name="userPubkey" id="userKeyInput" type="text">
+    </form>
+    <button onclick="">Show donations of a user</button>
+
+    <h3>Donations list</h3>
+    <ul id="donationsList"></ul>
+
+    <script>function sendDonation() {
+  var donationAmount = document.getElementById("donationInput").value;
+  console.log("Donation amount = " + donationAmount);
+}
+
+window.onload = function () {
+  main.init();
+};</script>
+  </body>
+</html>
